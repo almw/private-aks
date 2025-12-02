@@ -49,8 +49,8 @@ resource "azurerm_windows_virtual_machine" "vm_aks" {
   resource_group_name   = azurerm_resource_group.winvm.name
   location              = azurerm_resource_group.winvm.location
   size                  = "Standard_DS2_v2"
-  admin_username        = "dkuffar"
-  admin_password        = "T0day@ssw0rd123!"   # store securely in Key Vault in production
+  admin_username        = var.admin_username
+  admin_password        = var.admin_password   # store securely in Key Vault in production
 
   network_interface_ids = [
     azurerm_network_interface.nic_aksvm.id
