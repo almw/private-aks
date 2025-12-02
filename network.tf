@@ -1,6 +1,6 @@
 # Define the AKS virtual network
 resource "azurerm_virtual_network" "aks" {
-  name                = "enduser-vnet"
+  name                = "aks-vnet"
   address_space       = ["172.16.0.0/24"]
   location            = azurerm_resource_group.aks.location
   resource_group_name = azurerm_resource_group.aks.name
@@ -73,7 +73,7 @@ resource "azurerm_subnet" "pep" {
 #     primary                    = true
 #     private_ip_address_version = "IPv4"
 #     # private_ip_allocation_method  = "Dynamic"
-#     subnet_id = "/subscriptions/5670c878-c5f9-4979-93b8-68f58fb292ca/resourceGroups/example-rg/providers/Microsoft.Network/virtualNetworks/enduser-vnet/subnets/aks-subnet"
+#     subnet_id = "/subscriptions/5670c878-c5f9-4979-93b8-68f58fb292ca/resourceGroups/example-rg/providers/Microsoft.Network/virtualNetworks/aks-vnet/subnets/aks-subnet"
 #   }
 # }
 

@@ -43,6 +43,7 @@ Enable PLS network policies on the subnet (Microsoft.Network/allowPLSBinder)
 echo "# private-aks" >> README.md
 git init
 git add README.md
+git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/almw/private-aks.git
