@@ -28,6 +28,7 @@
     subscription_id = "<Your subscription_id>"
     admin_username  = "<Your VM local admin_username>"
     admin_password  = "<Your VM admin_password>"
+    vm_nsg_source_address_prefix = "<Your https://IPv4.me>"
 
 2. **Initialize Terraform:**
     ```pwsl
