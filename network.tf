@@ -64,7 +64,7 @@ resource "azurerm_subnet" "pep" {
 
 #   # Matches: "loadBalancerFrontendIpConfigurations": [ { "id": "..." } ]
 #   load_balancer_frontend_ip_configuration_ids = [
-#     "/subscriptions/5670c878-c5f9-4979-93b8-68f58fb292ca/resourceGroups/MC_example-rg_aksalmwdemocluster101_eastus/providers/Microsoft.Network/loadBalancers/kubernetes/frontendIPConfigurations/053d13a2-eae4-4868-93bf-15fb0557f1aa"
+#     "/subscriptions/<sun_id>/resourceGroups/MC_example-rg_aksalmwdemocluster101_eastus/providers/Microsoft.Network/loadBalancers/kubernetes/frontendIPConfigurations/053d13a2-eae4-4868-93bf-15fb0557f1aa"
 #   ]
 
 #   # Matches: "ipConfigurations": [ { "name": "aks-subnet-1", "subnet": {...}} ]
@@ -73,7 +73,7 @@ resource "azurerm_subnet" "pep" {
 #     primary                    = true
 #     private_ip_address_version = "IPv4"
 #     # private_ip_allocation_method  = "Dynamic"
-#     subnet_id = "/subscriptions/5670c878-c5f9-4979-93b8-68f58fb292ca/resourceGroups/example-rg/providers/Microsoft.Network/virtualNetworks/aks-vnet/subnets/aks-subnet"
+#     subnet_id = "/subscriptions/<sun_id>/resourceGroups/example-rg/providers/Microsoft.Network/virtualNetworks/aks-vnet/subnets/aks-subnet"
 #   }
 # }
 
@@ -81,13 +81,13 @@ resource "azurerm_subnet" "pep" {
 #   name                = "aks-pls-pep"
 #   location            = "westus"
 #   resource_group_name = "endusers-rg"
-#   subnet_id           = "/subscriptions/5670c878-c5f9-4979-93b8-68f58fb292ca/resourceGroups/endusers-rg/providers/Microsoft.Network/virtualNetworks/endusers-vnet/subnets/pep-subnet"
+#   subnet_id           = "/subscriptions/<sun_id>/resourceGroups/endusers-rg/providers/Microsoft.Network/virtualNetworks/endusers-vnet/subnets/pep-subnet"
 
 #   custom_network_interface_name = "aks-pls-pep-nic"
 
 #   private_service_connection {
 #     name                           = "aks-pls-pep"
-#     private_connection_resource_id = "/subscriptions/5670c878-c5f9-4979-93b8-68f58fb292ca/resourceGroups/example-rg/providers/Microsoft.Network/privateLinkServices/aks-pls"
+#     private_connection_resource_id = "/subscriptions/<sun_id>/resourceGroups/example-rg/providers/Microsoft.Network/privateLinkServices/aks-pls"
 #     is_manual_connection           = false
 #   }
 # }
