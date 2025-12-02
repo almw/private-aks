@@ -74,3 +74,17 @@ kubectl apply -f demo-web/deployment.yaml
     curl http://<ILB-IP> 
     # or
     Start-Process -FilePath "http://172.16.0.7:80/"
+
+
+## Create Private Link Service (PLS) & Private Endpoint
+
+```txt
+[AKS Pod]  
+    ↓  
+[AKS Service Type: LoadBalancer → Internal Load Balancer (ILB) External IP]  
+    ↓  
+[Private Link Service (PLS)]  
+    ↓  
+[Private Endpoint in VNet 192.168.0.0/24]  
+    ↓  
+[Client VNet] 
