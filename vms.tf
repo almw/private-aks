@@ -12,7 +12,7 @@ resource "azurerm_network_security_group" "nsg_aksvm" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "3389"
-    source_address_prefix      = "72.85.32.239/32"
+    source_address_prefix      = var.vm_nsg_source_address_prefix
     destination_address_prefix = "*"
   }
 }
